@@ -15,8 +15,8 @@ import java.io.InputStream;
 public class AWSS3Utility {
 
     private static final String BUCKET = "atypon-video-islam";
-    private static final String accessKey = "AKIASC2N7WFWDD5B4TOY";
-    private static final String accessSecret = "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";
+    private static final String accessKey = "anykey";
+    private static final String accessSecret = "anykey";
 
     public static void uploadFile(String fileName, InputStream inputStream) throws IOException {
 
