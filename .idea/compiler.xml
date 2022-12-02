@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="StreamService" />
+        <module name="Upload" />
+        <module name="authintication" />
+        <module name="database" />
+        <module name="storage" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="authintication" target="1.8" />
+      <module name="database" target="1.8" />
+      <module name="storage" target="1.8" />
+      <module name="StreamService" target="1.8" />
+      <module name="Upload" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="StreamService" options="-parameters" />
+      <module name="Upload" options="-parameters" />
+      <module name="authintication" options="-parameters" />
+      <module name="database" options="-parameters" />
+      <module name="storage" options="-parameters" />
+    </option>
+  </component>
+</project>

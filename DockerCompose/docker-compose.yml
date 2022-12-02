@@ -1,0 +1,73 @@
+version: "3"
+services:
+
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - testnet
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=Videos
+
+  authentication:
+    image: authentication
+    container_name: authentication
+    networks:
+      - testnet
+    ports:
+      - "8070:8070"
+
+  database:
+    image: database
+    container_name: database
+    restart: unless-stopped
+    ports:
+      - "8090:8090"
+    networks:
+      - testnet
+    depends_on:
+      - mysql
+
+
+  storage:
+    image: storage
+    container_name: storage
+    networks:
+      - testnet
+    ports:
+      - "8060:8060"
+
+  upload:
+    image: upload
+    container_name: upload
+    networks:
+      - testnet
+    ports:
+      - "8080:8080"
+    depends_on:
+      - storage
+      - authentication
+      - database
+
+  stream:
+    image: stream
+    container_name: stream
+    networks:
+      - testnet
+    ports:
+      - "8050:8050"
+    depends_on:
+      - authentication
+      - database
+
+volumes:
+  db_data: { }
+
+networks:
+  testnet:

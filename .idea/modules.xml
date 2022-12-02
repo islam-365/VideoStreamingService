@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/StreamService/StreamService.iml" filepath="$PROJECT_DIR$/StreamService/StreamService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Upload/Upload.iml" filepath="$PROJECT_DIR$/Upload/Upload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/authintication/authintication.iml" filepath="$PROJECT_DIR$/authintication/authintication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/contarization.iml" filepath="$PROJECT_DIR$/.idea/contarization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/database/database.iml" filepath="$PROJECT_DIR$/database/database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/storage/storage.iml" filepath="$PROJECT_DIR$/storage/storage.iml" />
+    </modules>
+  </component>
+</project>
